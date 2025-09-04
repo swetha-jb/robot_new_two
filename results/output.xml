@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-09-01T16:39:23.360052" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="/home/ashwanikk/Robot-Framework_new_repo/tests/test_login.robot">
+<kw name="Open Browser To Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-01T16:39:23.482698" level="INFO">Opening browser 'chrome' to base url 'https://accounts2.netgear.com/login?redirectUrl=https:%2F%2Finsight.netgear.com%2F&amp;clientId=6dlf5ppqm5oic7hhtk68qrlc9j'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-01T16:39:23.482490" elapsed="10.009059"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-01T16:39:33.491904" elapsed="0.041167"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-01T16:39:36.534004" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-01T16:39:33.533369" elapsed="3.000921"/>
+</kw>
+<status status="PASS" start="2025-09-01T16:39:23.481905" elapsed="13.052696"/>
+</kw>
+<test id="s1-t1" name="Login With Valid Credentials" line="21">
+<kw name="Enter The Username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-01T16:39:36.537311" level="INFO">Typing text 'viku.prod@yopmail.com' into text field 'xpath=//input[@formcontrolname='email']'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-01T16:39:36.536557" elapsed="0.128761"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2025-09-01T16:39:36.535801" elapsed="0.129694"/>
+</kw>
+<kw name="Enter The Password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-01T16:39:36.666451" level="INFO">Typing text 'Netgear1@' into text field 'xpath=//input[@formcontrolname='password']'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-01T16:39:36.666187" elapsed="0.086619"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-09-01T16:39:36.665785" elapsed="0.087178"/>
+</kw>
+<kw name="Click On Sign In Button" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-01T16:39:36.753813" level="INFO">Clicking element 'id=Login-btn'.</msg>
+<arg>${SIGNIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-01T16:39:36.753569" elapsed="0.224035"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-01T16:39:46.978538" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-01T16:39:36.977961" elapsed="10.000899"/>
+</kw>
+<status status="PASS" start="2025-09-01T16:39:36.753245" elapsed="10.225877"/>
+</kw>
+<status status="PASS" start="2025-09-01T16:39:36.534805" elapsed="10.444736"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-01T16:39:46.980754" elapsed="0.079123"/>
+</kw>
+<status status="PASS" start="2025-09-01T16:39:23.361219" elapsed="23.698774"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="1" fail="0" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
