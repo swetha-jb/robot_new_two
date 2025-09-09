@@ -14,16 +14,24 @@ ${PASSWORD}   Netgear1@
 *** Keywords ***
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless=new
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --remote-debugging-port=9222
+
+    ${headless}=    Set Variable    --headless=new
+    ${nosandbox}=    Set Variable    --no-sandbox
+    ${devshm}=      Set Variable    --disable-dev-shm-usage
+    ${gpu}=         Set Variable    --disable-gpu
+    ${remote}=      Set Variable    --remote-debugging-port=9222
+
+    Call Method    ${options}    add_argument    ${headless}
+    Call Method    ${options}    add_argument    ${nosandbox}
+    Call Method    ${options}    add_argument    ${devshm}
+    Call Method    ${options}    add_argument    ${gpu}
+    Call Method    ${options}    add_argument    ${remote}
 
     Create WebDriver    Chrome    options=${options}
     Go To    ${URL}
     Maximize Browser Window
     Sleep    3s
+
 
 *** Test Cases ***
 Login With Valid Credentials
