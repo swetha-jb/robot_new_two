@@ -1,25 +1,28 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    ../chromedriver_wrapper.py
-Resource   ../resources/login_page.resource
-
-Suite Setup       Open Browser To Login Page
-Suite Teardown    Close Browser
 
 *** Variables ***
-${URL}            https://accounts2.netgear.com/login?redirectUrl=https:%2F%2Finsight.netgear.com%2F&clientId=6dlf5ppqm5oic7hhtk68qrlc9j
-${USERNAME}       viku.prod@yopmail.com
-${PASSWORD}       Netgear1@
+${URL}    https://example.com
 
 *** Keywords ***
-Open Browser To Login Page
+Open Browser To Example
     ${options}=    Chrome Options
     Open Browser    ${URL}    chrome    options=${options}
     Maximize Browser Window
-    Sleep    3s
+    Sleep    1s
 
 *** Test Cases ***
-Login With Valid Credentials
-    Enter The Username    ${USERNAME}
-    Enter The Password    ${PASSWORD}
-    Click On Sign In Button
+Verify Example Page Title
+    [Setup]    Open Browser To Example
+    Title Should Be    Example Domain
+    [Teardown]    Close Browser
+
+Verify Example Content
+    [Setup]    Open Browser To Example
+    Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
+    [Teardown]    Close Browser
+
+Log Example Domain
+    Log To Console    Example Domain
+
