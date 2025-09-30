@@ -16,12 +16,12 @@ Open Browser To Example
 Verify Example Page Title
     [Setup]    Open Browser To Example
     Title Should Be    Example Domain
-    [Teardown]    Close Browser
+    [Teardown]    Close Browse
 
 Verify Example Content
     [Setup]    Open Browser To Example
     Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
-    [Teardown]    Close Browser
+    [Teardown]    Close Browse
 
 Log Example Domain
     Log To Console    Example Domain
