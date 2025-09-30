@@ -16,7 +16,7 @@ Open Browser To Example
 Verify Example Page Title
     [Setup]    Open Browser To Example
     Title Should Be    Example Domain
-    [Teardown]    Close Browse
+    [Teardown]    Close Browser
 
 Verify Example Content
     [Setup]    Open Browser To Example
