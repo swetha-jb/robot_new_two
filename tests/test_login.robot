@@ -21,7 +21,7 @@ Verify Example Page Title
 Verify Example Content
     [Setup]    Open Browser To Example
     Element Should Be Visible    xpath://h1[contains(text(), 'Example Domai')]
-    [Teardown]    Close Browse
+    [Teardown]    Close Browser
 
 Log Example Domain
     Log To Console    Example Domain
