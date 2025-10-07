@@ -20,8 +20,8 @@ Verify Example Page Title
 
 Verify Example Content
     [Setup]    Open Browser To Example
-    # Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
-    Element Should Be Visible    xpath://h1[contains(text(), 'ZZZZZZZZZZ')]
+    Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
+    # Element Should Be Visible    xpath://h1[contains(text(), 'ZZZZZZZZZZ')]
     [Teardown]    Close Browser
 
 Log Example Domain
