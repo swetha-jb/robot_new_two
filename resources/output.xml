@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.13 on linux)" generated="2025-12-02T12:18:15.451040" rpa="false" schemaversion="5">
+<suite id="s1" name="2025-12-02T17-48-12" source="/app/new_robot_01/2025-12-02T17-48-12">
+<suite id="s1-s1" name="New Robot 01" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01">
+<suite id="s1-s1-s1" name="Robot" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot">
+<suite id="s1-s1-s1-s1" name="Robot framework" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework">
+<suite id="s1-s1-s1-s1-s1" name="Tests" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests">
+<suite id="s1-s1-s1-s1-s1-s1" name="Devesh Assessment" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/Devesh_Assessment.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Open Browser to Example" line="7">
+<kw name="Open Browser">
+<msg time="2025-12-02T12:18:15.523674" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.523599" elapsed="0.000154">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Title Should Be">
+<arg>Example Domain</arg>
+<status status="NOT RUN" start="2025-12-02T12:18:15.523937" elapsed="0.000042"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2025-12-02T12:18:15.525074" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-12-02T12:18:15.525031" elapsed="0.000142">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.521377" elapsed="0.003877">No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Verify Example Content" line="12">
+<kw name="Open Browser to Example" type="SETUP">
+<msg time="2025-12-02T12:18:15.526907" level="FAIL">No keyword with name 'Open Browser to Example' found.</msg>
+<status status="FAIL" start="2025-12-02T12:18:15.526862" elapsed="0.000098">No keyword with name 'Open Browser to Example' found.</status>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2025-12-02T12:18:15.527937" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-12-02T12:18:15.527900" elapsed="0.000124">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.525575" elapsed="0.002520">Setup failed:
+No keyword with name 'Open Browser to Example' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t3" name="Verify Example Content1" line="17">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Example Domain</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.528659" elapsed="0.000209"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.528330" elapsed="0.000698"/>
+</test>
+<status status="FAIL" start="2025-12-02T12:18:15.520100" elapsed="0.009318"/>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s2" name="Test Checkbox Handling" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/test_checkbox_handling.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.864486" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7544ca1afbd0&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.864075" elapsed="0.000466"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.865061" level="FAIL">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</msg>
+<arg>${options}</arg>
+<arg>binary_location</arg>
+<arg>${CHROMIUM BINARY}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-12-02T12:18:15.864730" elapsed="0.000575">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.865691" elapsed="0.000037"/>
+</kw>
+<var name="${arg}"/>
+<status status="NOT RUN" start="2025-12-02T12:18:15.865558" elapsed="0.000237"/>
+</iter>
+<var>${arg}</var>
+<value>@{CHROMIUM OPTIONS.split(";")}</value>
+<status status="NOT RUN" start="2025-12-02T12:18:15.865436" elapsed="0.000415"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${service}</var>
+<arg>selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')</arg>
+<arg>selenium.webdriver.chrome.service</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.866020" elapsed="0.000048"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.866200" elapsed="0.020250"/>
+</kw>
+<arg>${fetchLink}</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.863283" elapsed="0.023415">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s2-t1" name="TC_6" line="9">
+<status status="FAIL" start="2025-12-02T12:18:15.886812" elapsed="0.000506">Parent suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.888220" elapsed="0.000178"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.887847" elapsed="0.000634"/>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.530182" elapsed="0.358347">Suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s3" name="Test Dropdown Handling" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/test_dropdown_handling.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.894942" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7544ca135b90&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.894608" elapsed="0.000411"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.895591" level="FAIL">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</msg>
+<arg>${options}</arg>
+<arg>binary_location</arg>
+<arg>${CHROMIUM BINARY}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-12-02T12:18:15.895163" elapsed="0.000584">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.896095" elapsed="0.000035"/>
+</kw>
+<var name="${arg}"/>
+<status status="NOT RUN" start="2025-12-02T12:18:15.895946" elapsed="0.000236"/>
+</iter>
+<var>${arg}</var>
+<value>@{CHROMIUM OPTIONS.split(";")}</value>
+<status status="NOT RUN" start="2025-12-02T12:18:15.895846" elapsed="0.000390"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${service}</var>
+<arg>selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')</arg>
+<arg>selenium.webdriver.chrome.service</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.896458" elapsed="0.000034"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.896637" elapsed="0.000030"/>
+</kw>
+<arg>${dropdown_url}</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.894287" elapsed="0.002516">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s3-t1" name="TC_1" line="9">
+<status status="FAIL" start="2025-12-02T12:18:15.896886" elapsed="0.000385">Parent suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.897914" elapsed="0.000185"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.897703" elapsed="0.000478"/>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.889388" elapsed="0.008836">Suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s4" name="Test Mouse Hover" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/test_mouse_hover.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.904393" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7544cb40cbd0&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.904095" elapsed="0.000338"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.904821" level="FAIL">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</msg>
+<arg>${options}</arg>
+<arg>binary_location</arg>
+<arg>${CHROMIUM BINARY}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-12-02T12:18:15.904578" elapsed="0.000379">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.905296" elapsed="0.000034"/>
+</kw>
+<var name="${arg}"/>
+<status status="NOT RUN" start="2025-12-02T12:18:15.905185" elapsed="0.000198"/>
+</iter>
+<var>${arg}</var>
+<value>@{CHROMIUM OPTIONS.split(";")}</value>
+<status status="NOT RUN" start="2025-12-02T12:18:15.905086" elapsed="0.000348"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${service}</var>
+<arg>selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')</arg>
+<arg>selenium.webdriver.chrome.service</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.905562" elapsed="0.000031"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.905745" elapsed="0.000032"/>
+</kw>
+<arg>${hover_url}</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.903771" elapsed="0.002133">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s4-t1" name="Tc_4" line="10">
+<status status="FAIL" start="2025-12-02T12:18:15.905999" elapsed="0.000360">Parent suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.907319" elapsed="0.000213"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.906764" elapsed="0.000858"/>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.899022" elapsed="0.008651">Suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s5" name="Test Radio Button Handling" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/test_radio_button_handling.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.914086" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7544cb3ed590&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.913741" elapsed="0.000387"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.914519" level="FAIL">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</msg>
+<arg>${options}</arg>
+<arg>binary_location</arg>
+<arg>${CHROMIUM BINARY}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-12-02T12:18:15.914273" elapsed="0.000392">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.914993" elapsed="0.000049"/>
+</kw>
+<var name="${arg}"/>
+<status status="NOT RUN" start="2025-12-02T12:18:15.914865" elapsed="0.000230"/>
+</iter>
+<var>${arg}</var>
+<value>@{CHROMIUM OPTIONS.split(";")}</value>
+<status status="NOT RUN" start="2025-12-02T12:18:15.914760" elapsed="0.000388"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${service}</var>
+<arg>selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')</arg>
+<arg>selenium.webdriver.chrome.service</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.915277" elapsed="0.000031"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.915461" elapsed="0.000031"/>
+</kw>
+<arg>${radio_url}</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.913407" elapsed="0.002219">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s5-t1" name="Tc_3" line="10">
+<status status="FAIL" start="2025-12-02T12:18:15.915709" elapsed="0.000417">Parent suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.916811" elapsed="0.000137"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.916573" elapsed="0.000488"/>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.908395" elapsed="0.008709">Suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s6" name="Test Window Handling" source="/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/tests/test_window_handling.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.924044" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7544ca80cf10&gt;</msg>
+<var>${options}</var>
+<arg>selenium.webdriver.ChromeOptions()</arg>
+<arg>selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.923711" elapsed="0.000375"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-12-02T12:18:15.924483" level="FAIL">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</msg>
+<arg>${options}</arg>
+<arg>binary_location</arg>
+<arg>${CHROMIUM BINARY}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-12-02T12:18:15.924228" elapsed="0.000377">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.924902" elapsed="0.000032"/>
+</kw>
+<var name="${arg}"/>
+<status status="NOT RUN" start="2025-12-02T12:18:15.924794" elapsed="0.000191"/>
+</iter>
+<var>${arg}</var>
+<value>@{CHROMIUM OPTIONS.split(";")}</value>
+<status status="NOT RUN" start="2025-12-02T12:18:15.924696" elapsed="0.000388"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${service}</var>
+<arg>selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')</arg>
+<arg>selenium.webdriver.chrome.service</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.925216" elapsed="0.000032"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<arg>service=${service}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-12-02T12:18:15.925396" elapsed="0.000032"/>
+</kw>
+<arg>${textbox_url}</arg>
+<status status="FAIL" start="2025-12-02T12:18:15.923410" elapsed="0.002143">Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s6-t1" name="Tc_5" line="10">
+<status status="FAIL" start="2025-12-02T12:18:15.925640" elapsed="0.000391">Parent suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-02T12:18:15.926701" elapsed="0.000128"/>
+</kw>
+<status status="PASS" start="2025-12-02T12:18:15.926501" elapsed="0.000401"/>
+</kw>
+<status status="FAIL" start="2025-12-02T12:18:15.917912" elapsed="0.009109">Suite setup failed:
+Calling method 'binary_location' failed: TypeError: 'str' object is not callable</status>
+</suite>
+<status status="FAIL" start="2025-12-02T12:18:15.518816" elapsed="0.409054"/>
+</suite>
+<status status="FAIL" start="2025-12-02T12:18:15.517574" elapsed="0.411127"/>
+</suite>
+<status status="FAIL" start="2025-12-02T12:18:15.516159" elapsed="0.413504"/>
+</suite>
+<status status="FAIL" start="2025-12-02T12:18:15.514075" elapsed="0.416239"/>
+</suite>
+<status status="FAIL" start="2025-12-02T12:18:15.452631" elapsed="0.478228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="2025-12-02T17-48-12" id="s1" pass="1" fail="7" skip="0">2025-12-02T17-48-12</stat>
+<stat name="New Robot 01" id="s1-s1" pass="1" fail="7" skip="0">2025-12-02T17-48-12.New Robot 01</stat>
+<stat name="Robot" id="s1-s1-s1" pass="1" fail="7" skip="0">2025-12-02T17-48-12.New Robot 01.Robot</stat>
+<stat name="Robot framework" id="s1-s1-s1-s1" pass="1" fail="7" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework</stat>
+<stat name="Tests" id="s1-s1-s1-s1-s1" pass="1" fail="7" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests</stat>
+<stat name="Devesh Assessment" id="s1-s1-s1-s1-s1-s1" pass="1" fail="2" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Devesh Assessment</stat>
+<stat name="Test Checkbox Handling" id="s1-s1-s1-s1-s1-s2" pass="0" fail="1" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Test Checkbox Handling</stat>
+<stat name="Test Dropdown Handling" id="s1-s1-s1-s1-s1-s3" pass="0" fail="1" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Test Dropdown Handling</stat>
+<stat name="Test Mouse Hover" id="s1-s1-s1-s1-s1-s4" pass="0" fail="1" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Test Mouse Hover</stat>
+<stat name="Test Radio Button Handling" id="s1-s1-s1-s1-s1-s5" pass="0" fail="1" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Test Radio Button Handling</stat>
+<stat name="Test Window Handling" id="s1-s1-s1-s1-s1-s6" pass="0" fail="1" skip="0">2025-12-02T17-48-12.New Robot 01.Robot.Robot framework.Tests.Test Window Handling</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-02T12:18:15.922536" level="ERROR">Error in file '/app/new_robot_01/2025-12-02T17-48-12/new_robot_01/Robot/Robot_framework/keywords/keywords_window_handling.robot' on line 2: Importing library 'seleniumLibrary' failed: ModuleNotFoundError: No module named 'seleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/local/lib/python311.zip
+  /usr/local/lib/python3.11
+  /usr/local/lib/python3.11/lib-dynload
+  /usr/local/lib/python3.11/site-packages</msg>
+</errors>
+</robot>
